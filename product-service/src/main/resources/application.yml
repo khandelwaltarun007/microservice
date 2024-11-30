@@ -1,0 +1,14 @@
+server:
+  port: 6060  # Port for the API Gateway
+spring:
+  application:
+    name: product-service 
+  config:
+    import: optional:configserver:http://localhost:8888
+logging:
+    level:
+      org:
+        springframework:
+          cloud:
+            config: INFO
+          boot: INFO
